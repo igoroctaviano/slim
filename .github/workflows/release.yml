@@ -6,35 +6,35 @@ on:
       - master
 
 jobs:
-  bump-version:
-    name: Bump version and create new tag
-    runs-on: ubuntu-latest
+  # bump-version:
+  #   name: Bump version and create new tag
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout source code
-        uses: actions/checkout@v4.1.4
-        with:
-          ref: ${{ github.ref }}
+  #   steps:
+  #     - name: Checkout source code
+  #       uses: actions/checkout@v4.1.4
+  #       with:
+  #         ref: ${{ github.ref }}
 
-      - name: cat package.json
-        run: cat ./package.json
+  #     - name: cat package.json
+  #       run: cat ./package.json
 
-      - name: Automated version bump
-        id: version-bump
-        uses: phips28/gh-action-bump-version@master
-        with:
-          tag-prefix: "v"
-          skip-tag: "true" # Add tag later in the release job
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #     - name: Automated version bump
+  #       id: version-bump
+  #       uses: phips28/gh-action-bump-version@master
+  #       with:
+  #         tag-prefix: "v"
+  #         skip-tag: "true" # Add tag later in the release job
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: cat package.json
-        run: cat ./package.json
+  #     - name: cat package.json
+  #       run: cat ./package.json
   release:
     name: Release
     runs-on: ubuntu-latest
-    needs:
-      - bump-version
+    # needs:
+    #   - bump-version
 
     steps:
       - name: Checkout repository
