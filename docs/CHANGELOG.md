@@ -4,6 +4,18 @@
 ### Bug Fixes
 
 * **test.txt:** fixing ([57cc5bc](https://github.com/igoroctaviano/slim/commit/57cc5bc34cc5d412a44bff5cc3221b04ecece576))
+* **test.txt:** testing ([0147f46](https://github.com/igoroctaviano/slim/commit/0147f46db1fb048e47477363ee178efdb345f817))
+* **test.txt:** testing ([cba2a99](https://github.com/igoroctaviano/slim/commit/cba2a996041d79eb785d3c5c42bd3fcba8ed4f39))
+* **test.txt:** testing ([64842be](https://github.com/igoroctaviano/slim/commit/64842beda60982d0157340d837ed42757854245f))
+* **test.txt:** testing ([fdcd3d2](https://github.com/igoroctaviano/slim/commit/fdcd3d2378319575e4711c37c0ef0a4c69b3a656))
+* **test.txt:** testing ([c1d223c](https://github.com/igoroctaviano/slim/commit/c1d223c5dafc1b262a1ca22cd1d4574e2739af66))
+
+## [0.14.8](https://github.com/igoroctaviano/slim/compare/v0.14.7...v0.14.8) (2024-05-02)
+
+
+### Bug Fixes
+
+* **test.txt:** fixing ([57cc5bc](https://github.com/igoroctaviano/slim/commit/57cc5bc34cc5d412a44bff5cc3221b04ecece576))
 
 # [0.2.0](https://github.com/igoroctaviano/slim/compare/v0.1.1...v0.2.0) (2024-05-02)
 
