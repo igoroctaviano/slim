@@ -24,16 +24,12 @@ jobs:
         uses: phips28/gh-action-bump-version@master
         with:
           tag-prefix: "v"
+          skip-tag: "true" # Add tag later in the release job
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: cat package.json
         run: cat ./package.json
-
-      - name: New tag
-        env:
-          NEW_TAG: ${{ steps.version-bump.outputs.newTag }}
-        run: echo "new tag $NEW_TAG"
   release:
     name: Release
     runs-on: ubuntu-latest
