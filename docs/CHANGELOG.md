@@ -1,3 +1,10 @@
+## [0.14.8](https://github.com/igoroctaviano/slim/compare/v0.14.7...v0.14.8) (2024-05-02)
+
+
+### Bug Fixes
+
+* **test.txt:** fixing ([57cc5bc](https://github.com/igoroctaviano/slim/commit/57cc5bc34cc5d412a44bff5cc3221b04ecece576))
+
 # [0.2.0](https://github.com/igoroctaviano/slim/compare/v0.1.1...v0.2.0) (2024-05-02)
 
 
