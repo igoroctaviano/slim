@@ -15,7 +15,7 @@ jobs:
       - run: sudo npm i -g yarn
 
       - name: Install dependencies
-        run: yarn install
+        run: yarn
 
       - name: Build
         run: REACT_APP_CONFIG=preview PUBLIC_URL=/ yarn build

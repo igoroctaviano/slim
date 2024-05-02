@@ -30,10 +30,10 @@ jobs:
       - name: cat package.json
         run: cat ./package.json
 
-      # - name: New tag
-      #   env:
-      #     NEW_TAG: ${{ steps.version-bump.outputs.newTag }}
-      #   run: echo "new tag $NEW_TAG"
+      - name: New tag
+        env:
+          NEW_TAG: ${{ steps.version-bump.outputs.newTag }}
+        run: echo "new tag $NEW_TAG"
   release:
     name: Release
     runs-on: ubuntu-latest
@@ -44,7 +44,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4.1.4
         with:
-          fetch-depth: 0
+          ref: master
 
       - name: Setup Node
         uses: actions/setup-node@v4.0.2
