@@ -29,7 +29,8 @@
                     {
                         "path": "build.zip",
                         "label": "slim-${nextRelease.gitTag}.zip"
-                    }
+                    },
+                    "docs/CHANGELOG.md"
                 ]
             }
         ]
