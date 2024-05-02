@@ -3,11 +3,6 @@
   "version": "0.14.7",
   "homepage": "https://github.com/imagingdatacommons/slim",
   "private": true,
-  "release": {
-    "branches": [
-      "master"
-    ]
-  },
   "scripts": {
     "start": "rm -rf ./node_modules/.cache/default-development && craco start",
     "build": "craco build",
