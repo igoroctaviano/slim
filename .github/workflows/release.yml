@@ -1,4 +1,4 @@
-name: release
+name: Release
 
 on:
   push:
@@ -7,36 +7,38 @@ on:
 
 jobs:
   bump-version:
-    name: "Bump version"
+    name: Bump version
     runs-on: ubuntu-latest
 
     steps:
-      - name: "Checkout source code"
-        uses: "actions/checkout@v4.1.4"
+      - name: Checkout source code
+        uses: actions/checkout@v4.1.4
         with:
           ref: ${{ github.ref }}
 
-      - name: "cat package.json"
+      - name: cat package.json
         run: cat ./package.json
 
-      - name: "Automated version bump"
+      - name: Automated version bump
         id: version-bump
-        uses: "phips28/gh-action-bump-version@master"
+        uses: phips28/gh-action-bump-version@master
         with:
           tag-prefix: "v"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: "cat package.json"
+      - name: cat package.json
         run: cat ./package.json
 
-      - name: "New tag"
+      - name: New tag
         env:
           NEW_TAG: ${{ steps.version-bump.outputs.newTag }}
         run: echo "new tag $NEW_TAG"
   release:
-    name: "Release"
+    name: Release
     runs-on: ubuntu-latest
+    depends-on:
+      - bump-version
 
     steps:
       - name: Checkout repository
