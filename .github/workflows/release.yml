@@ -30,10 +30,10 @@ jobs:
       - name: cat package.json
         run: cat ./package.json
 
-      - name: New tag
-        env:
-          NEW_TAG: ${{ steps.version-bump.outputs.newTag }}
-        run: echo "new tag $NEW_TAG"
+      # - name: New tag
+      #   env:
+      #     NEW_TAG: ${{ steps.version-bump.outputs.newTag }}
+      #   run: echo "new tag $NEW_TAG"
   release:
     name: Release
     runs-on: ubuntu-latest
